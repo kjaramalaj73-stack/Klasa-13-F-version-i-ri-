@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Këmbim Valutor</title>
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <style>
+
+    body {
+      background-color: #add8e6; 
+      min-height: 100vh;
+    }
+ </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container">
+    <span class="navbar-brand mb-0 h1">Këmbim Valutor</span>
+  </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="text-center mb-4">Konverto Monedhat</h4>
+                    <form action="convert3.php" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">Shuma</label>
+                            <input type="number" step="0.01" class="form-control" name="amount" placeholder="Shkruaj shumën" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nga monedha</label>
+                            <select class="form-select" name="from" required>
+                                <option value="EUR">Euro (EUR)</option>
+                                <option value="ALL"selected>Lek (ALL)</option>
+                                <option value="USD">Dollar Amerikan (USD)</option>
+                                <option value="GBP">Pound (GBP)</option>
+                                <option value="TRY">Lira Turke (TRY)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Në monedhën</label>
+                            <select class="form-select" name="to" required>
+                                <option value="EUR">Euro (EUR)</option>
+                                <option value="ALL">Lek (ALL)</option>
+                                <option value="USD">Dollar Amerikan (USD)</option>
+                                <option value="GBP">Pound (GBP)</option>
+                                <option value="TRY">Lira Turke (TRY)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Konverto</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class="text-center mt-4 mb-3 text-muted">
+    &copy; 2025 Këmbim Valutor
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
